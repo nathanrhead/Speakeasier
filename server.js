@@ -70,6 +70,8 @@ function getCity(req, res) {
             let pocket = data.body.candidates;
             let photoRefs = `https://maps.googleapis.com/maps/api/place/details/json?place_id=${pocket[0].place_id}&key=${GOOGLE_API_KEY}`;
 
+            // Old google places API: AIzaSyAeRkwadPt5w19bYgw4yjW3rc9uJsIADAY, which stopped working without a credit card attached; NRC created a new one on 1 April 2021, which works locally, but not on the Heroku deployed site.
+
             ////////////////////////// Country Info . . . on hold. //////////////////////////////////
             // superagent.get(photoRefs)
             //   .then(data => {
@@ -121,10 +123,8 @@ function getCity(req, res) {
       .catch(err => {
         console.log('ERROR', err);
         res.render('./pages/error', err);
-
-      })
+    })
   }
-
 }
 
 function saveBoarding(req, res) {

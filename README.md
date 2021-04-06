@@ -33,6 +33,4 @@
 + Brai, Nicco, Ron, Bade and Cait
 
 
-
 ![image](relationship.png)
-
